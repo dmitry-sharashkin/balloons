@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Baloons</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet">
+   <link rel="icon" href="img/undraw_happy_birthday_s72n.svg">
+   <link rel="stylesheet" href="css/ctyle.css">
+
+</head>
+
+<body>
+   <header>
+
+      <!-- Всплывающее окно -->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Пожалуйста заполните форму</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <form>
+                     <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Введите действующий Email адрес</div>
+                     </div>
+                     <div class="mb-3">
+                        <label for="exampleInputNumber1" class="form-label">Номер телефона</label>
+                        <input type="number" class="form-control" id="exampleInputNumber1">
+                     </div>
+                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Добавьте комментарий</label>
+                        <textarea name="comment" class="form-control"></textarea>
+                     </div>
+
+                     <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+                     <button type="submit" class="btn btn-danger mode-rd">Отправить заявку</button>
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+<!--    тело    -->
+
+      <nav class="navbar  navbar-expand-lg navbar-light fixed-top py-0" style="background-color: #FFD4D4;">
+         <div class="container-md align-items-center col-12">
+            <a class="navbar-brand " href="#home"> <img src="img/undraw_happy_birthday_s72n.svg" width="50px" height="50px"
+                  alt="logo"> <b>Baloons</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-center " id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                  <li class="nav-item ">
+                     <a class="nav-link" aria-current="page" href="#home">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#price">Галлерея</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#about">О нас</a>
+                  </li>
+ 
+                  <li class="nav-item">
+                     <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Связаться с
+                        нами</a>
+                  </li>
+               </ul>
+               <a class="link-tel__box link-rd" href="tel:+7999 666 88 66"><svg xmlns="http://www.w3.org/2000/svg"
+                     fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                     <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                  </svg> +7999 666 88 66</a>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <section>
+      <div class="container-md col-12 py-5 ">
+         <div class="main row" id="home">
+            <div class="main__title col-md-5 col-sm-12 pl-5">
+               <h1 style="font-weight: bold;">Воздушные шары</h1>
+               <h4 style="opacity:0.7; font-weight:400">доставка в пределах всего израиля в кратчайшие сроки</h4>
+
+               <button type="button" class="btn btn-danger mode-rd" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+                  Сделать заказ
+               </button>
+            </div>
+            <div class="main-bg col-md-7 col-sm-12  d-flex align-items-center"><img class="w-100"
+                  src="img/Balloon_Monochromatic.svg" alt=""></div>
+         </div>
+      </div>
+   </section>
+   <section class="gallery">
+      <h2 class="gallery__title container-md mb-5  ">Галлерея товаров</h2>
+      <div class="container">
+         <section class="price__wrap wrap" id="price">
+            <div class="price">
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-8101710.jpeg">
+                  </div>
+                  <h3>Шары-буквы</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-4684169.jpeg">
+                  </div>
+                  <h3>Букет шаров</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">3500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-3371097.jpeg">
+                  </div>
+                  <h3>Шары-металик набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">900</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-5871635.jpeg">
+                  </div>
+                  <h3>День всех влюбленных набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur .</p>
+                  <p>цена:<strong class="color-rd">2500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-1904733.jpeg">
+                  </div>
+                  <h3>Хеллоуинский набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">1500</strong></p>
+               </div>
+
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-8101710.jpeg">
+                  </div>
+                  <h3>Шары-буквы</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-4684169.jpeg">
+                  </div>
+                  <h3>Букет шаров</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">3500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-3371097.jpeg">
+                  </div>
+                  <h3>Шары-металик набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">900</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-5871635.jpeg">
+                  </div>
+                  <h3>День всех влюбленных набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">2500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-1904733.jpeg">
+                  </div>
+                  <h3>Хеллоуинский набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">1500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-8101710.jpeg">
+                  </div>
+                  <h3>Шары-буквы</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-4684169.jpeg">
+                  </div>
+                  <h3>Букет шаров</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">3500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-3371097.jpeg">
+                  </div>
+                  <h3>Шары-металик набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">900</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-5871635.jpeg">
+                  </div>
+                  <h3>День всех влюбленных набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">2500</strong></p>
+               </div>
+
+               <div class="price-item">
+                  <div class="price-img__wrap">
+                     <img src="img/pexels-photo-1904733.jpeg">
+                  </div>
+                  <h3>Хеллоуинский набор</h3>
+                  <p class="gallery-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, nemo.</p>
+                  <p>цена:<strong class="color-rd">1500</strong></p>
+               </div>
+
+
+         </section>
+      </div>
+   </section>
+
+
+   <section>
+      <div class="container about" id="about">
+         <div class="row">
+            <div class="col-md-6 about-img__wrap">
+               <img class="w-100" src="img/Balloon_Flatline.svg">
+            </div>
+            <div class="about-list col-md-5">
+               <h2>Немного о нашей компании</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, delectus! Accusamus vitae cumque,
+                  suscipit sunt consequuntur assumenda ipsum maxime quas deleniti amet inventore nulla aspernatur harum!
+                  Doloremque at aliquid sint unde? Laborum recusandae minus id temporibus vitae aut, provident eveniet
+                  blanditiis dolore cum harum animi maiores in voluptates iusto at.</p>
+                  <button type="button" class="btn btn-danger mode-rd" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+                  Сделать заказ
+               </button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer class="footer__wrap">
+      <div class="footer wrap container">
+         <div class="footer__right">©Balloon 2020<span>,ל הזכויות שמורות</span></div>
+         <a href="https://rab-it.org/" class="footer__left"><img class="rab-it__img" src="img/rab-it.png"><span>powered
+               by</span>
+            <p>RAB-IT</p>
+         </a>
+      </div>
+   </footer>
+
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
